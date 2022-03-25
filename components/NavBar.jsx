@@ -21,7 +21,6 @@ const NavBar = () => (
       </Link>
     </Box>
     <Spacer />
-    {/* spacer is for making a space before next item */}
     <Box>
       <Menu>
         <MenuButton
