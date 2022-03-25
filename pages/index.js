@@ -4,7 +4,6 @@ import { Flex, Box, Text, Button } from "@chakra-ui/react";
 import { baseUrl, fetchApi } from "../utils/fetchApi";
 import Property from "../components/Property";
 
-// this what is a functional components looks like
 const Banner = ({
   purpose,
   title1,
@@ -16,11 +15,8 @@ const Banner = ({
   imageUrl,
 }) => (
   <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
-    {/* m is for margine*/}
     <Image src={imageUrl} alt={"banner"} width={500} height={300} />
-    {/* Box is just like a simple div*/}
     <Box p="5">
-      {/*p for padding */}
       <Text color="gray.500" fontSize="sm" fontWeight="meduim">
         {purpose}
       </Text>
@@ -37,7 +33,6 @@ const Banner = ({
       <Button fontSize="xl">
         <Link href={linkName}>{buttonText}</Link>
       </Button>
-      {/*bg is for backgroundColor */}
     </Box>
   </Flex>
 );
@@ -56,7 +51,6 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
       />
       <Flex flexWrap="wrap">
-        {/* fetch the properties and map over them*/}
         {propertiesForRent.map((property) => (
           <Property property={property} key={property.id} />
         ))}
@@ -73,7 +67,6 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         imageUrl="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
       />
       <Flex flexWrap="wrap">
-        {/* fetch the properties and map over them*/}
         {propertiesForSale.map((property) => (
           <Property property={property} key={property.id} />
         ))}
@@ -83,7 +76,6 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
 }
 
 export async function getStaticProps() {
-  /* here we can do the api calls */
   const proprtyForSale = await fetchApi(
     `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`
   );
@@ -91,7 +83,6 @@ export async function getStaticProps() {
     `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`
   );
 
-  /* NEXTjs automatically pass this props to the Home Component but we must catch them*/
   return {
     props: {
       propertiesForSale: proprtyForSale?.hits,
