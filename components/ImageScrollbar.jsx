@@ -10,7 +10,7 @@ const LeftArrow = () =>{
     return (
         <Flex justifyContent="center" alignItems="center" marginRight="1">
             <Icon as={FaArrowAltCircleLeft}
-            onClick={()=>scrollPrev()} /* we could've don ()=>scrollPrev */
+            onClick={()=>scrollPrev()} 
             fontSize="2xl"
             cursor="pointer"
             />
@@ -23,7 +23,7 @@ const RightArrow = () =>{
     return (
         <Flex justifyContent="center" alignItems="center" marginRight="1">
             <Icon as={FaArrowAltCircleRight}
-            onClick={()=>scrollNext()} /* we could've don ()=>scrollPrev */
+            onClick={()=>scrollNext()} 
             fontSize="2xl"
             cursor="pointer"
             />
