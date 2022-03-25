@@ -8,12 +8,8 @@ import Property from "../components/Property";
 import noresult from "../assets/images/noresult.svg";
 import { baseUrl, fetchApi } from "../utils/fetchApi";
 
-// the properties props here will be given by getDerverSideProps, in this case we must use this function
-// because we need fetching whenever client request something
-// the those utilty functions when the name changes, say for example from getStaticProps
-// to getServerSideProps => NEXT will complitly change the behaviour of Rendering
+
 const search = ({ properties }) => {
-  // to populate those props we will use the getStaticProps
   const [searchFilters, setSearchFilters] = useState(false);
   const router = useRouter();
 
@@ -33,7 +29,6 @@ const search = ({ properties }) => {
       >
         <Text>Search Property by filters</Text>
         <Icon paddingLeft="2" w="7" as={BsFilter} />
-        {/* as is for what icon should i use*/}
       </Flex>
       {searchFilters && <SearchFilters />}
       <Text fontSize="2xl" p="4" fontWeight="bold">
