@@ -1,5 +1,4 @@
 import Link from "next/link";
-// to link to some other pages
 import Image from "next/image";
 import { Box, Flex, Text, Avatar } from "@chakra-ui/react";
 import { FaBed, FaBath } from "react-icons/fa";
