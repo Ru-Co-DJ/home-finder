@@ -31,7 +31,6 @@ const PropertyDetails = ({
         <Flex alignItems="center">
           <Box p="1" paddingBottom="2" color="green.400">
             {isVerified && <GoVerified />}
-            {/* GoVerified is an icon */}
           </Box>
           <Text fontWeight="bold" fontSize="lg">
             AED {millify(price)}
@@ -51,7 +50,6 @@ const PropertyDetails = ({
       >
         {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft{" "}
         <BsGridFill />
-        {/* fabed, fabath, BsGridFill, GoVerified are icons */}
       </Flex>
       <Box marginTop="2">
         <Text fontSize="lg" marginBottom="2" fontWeight="bold">
