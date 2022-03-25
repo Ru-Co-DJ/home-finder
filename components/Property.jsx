@@ -43,7 +43,6 @@ const Property = ({
           <Flex alignItems="center">
             <Box p="1" paddingBottom="2" color="green.400">
               {isVerified && <GoVerified />}
-              {/* GoVerified is an icon */}
             </Box>
             <Text fontWeight="bold" fontSize="lg">
               AED {millify(price)}
