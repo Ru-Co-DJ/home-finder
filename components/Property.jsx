@@ -37,7 +37,6 @@ const Property = ({
           width={400}
           height={260}
         />
-        {/* default image will be in our assets*/}
       </Box>
       <Box w="full">
         <Flex paddingTop="2" alignItems="center" justifyContent="space-between">
@@ -64,7 +63,6 @@ const Property = ({
         >
           {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft{" "}
           <BsGridFill />
-          {/* fabed, fabath, BsGridFill, GoVerified are icons */}
         </Flex>
         <Text>
           {title.length > 30 ? `${title.substring(0, 30)}...` : title}
