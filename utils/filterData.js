@@ -1,4 +1,3 @@
-// a huge file with just a raw data
 export const filterData = [
   {
     items: [
