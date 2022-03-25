@@ -1,4 +1,4 @@
-// here we will render our footer, navigation bar and the content in the middle
+
 
 import Head from "next/head";
 import { Box } from "@chakra-ui/react";
@@ -18,8 +18,7 @@ const Layout = ({ children }) => (
       </header>
       <main>
         {children}
-        {/* children prop is equal to whatever we pass into the Layout component 
-                basically it is what inside the Layout component*/}
+
       </main>
       <footer>
         <Footer />
